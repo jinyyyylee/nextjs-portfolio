@@ -1,0 +1,31 @@
+.form-toast {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  border-radius: 8px;
+  background: rgb(56, 65, 137);
+  color: #fff;
+  padding: 10px 30px;
+  gap: 20px;
+  line-height: 1.2;
+  box-shadow: 0px 3px 10px 0px rgba(16, 11, 2, 0.08);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 101;
+
+  .toast-icon {
+    width: 20px;
+    height: 20px;
+
+    & > path {
+      fill: #fff;
+    }
+  }
+
+  .txt {
+    font-size: var(--font-base);
+  }
+}

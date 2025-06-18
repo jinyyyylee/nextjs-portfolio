@@ -1,0 +1,65 @@
+@use '../mhLim/index' as mhLim;
+.container{
+  background: #eee;
+}
+
+section {
+  .function{
+    &-list{
+      &-item{
+        margin-bottom: 40px;
+        padding: 40px 30px 0;
+        border-radius: 45px;
+        background: #eee;
+        box-shadow:  6px 6px 15px #cacaca,
+                    -6px -6px 15px #ffffff;
+        .info{
+          .title{
+            span{
+              padding-left: 2px;
+              font-size: 0.7em;
+              color: var(--colorText2);
+            }
+          }
+        }
+
+        .input{
+          &-wrap{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.selected {
+  &-address {
+    padding-top: 20px;
+
+    &-btn{
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 10px;
+      padding: 5px 10px;
+      font-size: 0.8em;
+      font-weight: bold;
+      border-radius: 5px;
+      border: 2px solid rgb(56, 65, 137);
+      color: rgb(56, 65, 137);
+      transition: all 0.2s ease-in-out;
+
+      &:hover{
+        background-color: rgb(56, 65, 137);
+        color: #fff;
+      }
+    }
+
+    &-placeholder{
+      color: var(--colorText5);
+    }
+  }
+}

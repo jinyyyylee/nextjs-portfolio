@@ -1,0 +1,179 @@
+// mixin 함수
+@import "../assets/scss/variables.scss";
+// 가이드 공통 css
+@import "../assets/scss/common.scss";
+// 좌측 네비게이터 메뉴 헤더
+@import "../assets/scss/sidebar.scss";
+
+// 전역 폰트 설정
+@font-face {
+  font-family: "EliceDigitalBaeum";
+  src: url("/fonts/elice/EliceDigitalBaeum_Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "EliceDigitalBaeum";
+  src: url("/fonts/elice/EliceDigitalBaeum_Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Pretendard-Regular', "EliceDigitalBaeum", "Nanum Gothic", sans-serif;
+  font-weight: normal;
+  color: #333;
+  line-height: 1;
+  font-size: var(--font-base);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  &:after,
+  &:before {
+    box-sizing: border-box;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:focus,
+  &:focus-visible,
+  &:active,
+  &:hover {
+    outline: 0;
+  }
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  touch-action: manipulation;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  caption {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+
+code {
+  background-color: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.9em;
+  color: #d63384;
+  border: 1px solid #e9ecef;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: #e9ecef;
+  }
+}
+
+:root {
+  --font-adm-xxl: 22px;
+  --font-adm-xl: 20px;
+  --font-adm-lg: 18px;
+  --font-adm-base: 16px;
+  --font-adm-sm: 14px;
+  --font-adm-xs: 12px;
+
+  --font-xxxl: 24px;
+  --font-xxl: 22px;
+  --font-xl: 20px;
+  --font-lg: 18px;
+  --font-base: 16px;
+  --font-sm: 14px;
+  --font-xs: 12px;
+
+  --colorMain: #000;
+
+  --colorPoint1: #fd8788;
+
+  --colorWheel1: #ea6bd6;
+  --colorWheel2: #7685d7;
+  --colorWheel3: #a072eb;
+  --colorWheel4: #47a1e6;
+  --colorWheel5: #1eb7b9;
+  --colorWheel6: #3da68c;
+  --colorWheel7: #72be48;
+  --colorWheel8: #ffa800;
+  --colorWheel9: #ff8919;
+  --colorWheel10: #fc696a;
+
+  --colorBg1: #f8f8f8;
+  --colorBg2: #d7d7d7;
+
+  --colorText1: #333;
+  --colorText2: #666;
+  --colorText3: #777;
+  --colorText4: #888;
+  --colorText5: #999;
+  --colorText6: #ccc;
+
+  --colorBorder1: #c2c2c2;
+  --colorBorder2: #d7d7d7;
+  --colorBorder3: #eaeaea;
+}

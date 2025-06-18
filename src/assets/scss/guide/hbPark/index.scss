@@ -1,0 +1,37 @@
+.login-button {
+    background-color: #4285F4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    &:hover {
+        background-color: #357ae8;
+    }
+    &:active {
+        background-color: #2868c7;
+    }
+}
+
+.login-container {
+    .login-welcome {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 20px;
+        &-name {
+            color: #339c4a;
+        }
+    }
+}
+
+
+.section-content{
+    margin-top: 20px;
+    .title{
+
+        font-size: 1.2rem;
+        font-weight: bold;
+
+    }
+}

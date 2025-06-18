@@ -1,0 +1,25 @@
+.wb-input{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: var(--font-sm);
+  border: 1px solid var(--colorBorder2);
+  border-radius: 5px;
+  background: #fff;
+
+  &-title{
+    width: 20%;
+    text-align: center;
+  }
+
+  &-cont{
+    width: 80%;
+
+    input{
+      width: 100%;
+      padding: 10px 20px;
+      border-left: 1px solid var(--colorBorder2);
+      cursor: text;
+    }
+  }
+}

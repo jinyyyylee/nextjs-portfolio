@@ -1,0 +1,220 @@
+.header {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  border-bottom: 1px solid var(--colorMainLight);
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.08);
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    .logo {
+      h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--colorMain, #333);
+        margin: 0;
+      }
+
+      .animated-logo {
+        padding-top: 10px;
+        display: flex;
+        gap: 2px;
+      }
+
+      .logo-letter {
+        display: inline-block;
+        animation: bounce 2s infinite;
+        transform-origin: bottom;
+        color: #2563eb;
+        font-weight: bold;
+      }
+
+      .logo-letter:nth-child(1) { animation-delay: 0s; }
+      .logo-letter:nth-child(2) { animation-delay: 0.1s; }
+      .logo-letter:nth-child(3) { animation-delay: 0.2s; }
+      .logo-letter:nth-child(4) { animation-delay: 0.3s; }
+      .logo-letter:nth-child(5) { animation-delay: 0.4s; }
+      .logo-letter:nth-child(6) { animation-delay: 0.5s; }
+
+      .chick {
+        display: inline-block;
+        margin-left: 8px;
+        vertical-align: middle;
+        animation: chick-bounce 1.2s infinite;
+      }
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .logged-in {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .user-name {
+          font-weight: 600;
+          color: var(--colorMainDark);
+        }
+
+        .user-email {
+          font-size: 0.9rem;
+          color: #666;
+        }
+
+        .logout-btn {
+          padding: 6px 12px;
+          background-color: var(--colorMainLight);
+          border: 1px solid var(--colorMain);
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 0.9rem;
+          color: #fff;
+          transition: background-color 0.2s, color 0.2s;
+
+          &:hover {
+            background-color: var(--colorMainDark);
+            color: #fff;
+          }
+        }
+      }
+
+      .logged-out {
+        display: flex;
+        gap: 10px;
+
+        .login-btn,
+        .signup-btn {
+          padding: 8px 16px;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 0.9rem;
+          transition: background-color 0.2s, color 0.2s, border 0.2s;
+        }
+
+        .login-btn {
+          background-color: var(--colorMain);
+          color: white;
+          border: none;
+
+          &:hover {
+            background-color: var(--colorMainDark);
+          }
+        }
+
+        .signup-btn {
+          background-color: transparent;
+          color: var(--colorMain);
+          border: 1px solid var(--colorMain);
+
+          &:hover {
+            background-color: var(--colorMain);
+            color: white;
+          }
+        }
+      }
+
+      .toggle-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--colorMainLight);
+        color: #fff;
+        transition: background-color 0.2s;
+
+        &:hover {
+          background-color: var(--colorMainDark);
+        }
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+    color: var(--colorMain);
+  }
+}
+
+@keyframes chick-bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  30% {
+    transform: translateY(-8px) scale(1.08);
+  }
+  60% {
+    transform: translateY(2px) scale(0.98);
+  }
+}
+
+.main-container {
+  width: 100%;
+  min-height: 100vh;
+  flex: 1;
+
+  // 컨테이너 내 섹션 공통 스타일
+  section {
+    width: 100%;
+    padding: 50px;
+
+    // 공통 제목
+    .section-title {
+      align-items: center;
+      border-left: 4px solid var(--colorMain);
+      display: flex;
+      font-size: 1.35em;
+      font-weight: 700;
+      gap: 10px;
+      margin-bottom: 20px;
+      padding-left: 0.45em;
+    }
+
+    // 메인 페이지 인트로 영역
+    .main-intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      width: 100%;
+      height: 100%;
+
+      .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+      }
+
+      .title-box {
+        display: block;
+        width: fit-content;
+        word-break: keep-all;
+        overflow: hidden;
+      }
+    }
+  }
+}
